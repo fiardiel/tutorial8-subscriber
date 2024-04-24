@@ -12,3 +12,10 @@ Within the main.rs file, the implementation of AMQP for message queuing is evide
 2. The second guest refers to the default password assigned to the RabbitMQ server
 3. The localhost refers to the default hostname of the RabbitMQ server
 4. The 5672 refers to the default port number of the RabbitMQ server
+
+## Slow subscriber
+![Slow Subscriber](image/slow_subscriber.png)
+
+It is showed that the queueed message hits 40. This happens because the subscriber is slow to process the message. The subscriber is slow because it sleeps for 1 second before processing the message.
+
+
