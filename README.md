@@ -19,3 +19,9 @@ Within the main.rs file, the implementation of AMQP for message queuing is evide
 It is showed that the queueed message hits 40. This happens because the subscriber is slow to process the message. The subscriber is slow because it sleeps for 1 second before processing the message.
 
 
+## 1 publisher 3 Subscriber
+![1 publisher 3 Subscriber](image/1_publisher_3_subscriber.png)
+
+![1 publisher 3 Subscriber cli](image/1_publisher_3_subscriber_2.png)
+
+We can see that the queue is not as much as the first one. This is because the message is distributed to 3 subscribers. The message is distributed to the subscriber in a round-robin fashion. This means that the message is distributed to the subscriber in a sequential manner. The first message is distributed to the first subscriber, the second message is distributed to the second subscriber, and the third message is distributed to the third subscriber. This process is repeated until all the messages are distributed to the subscriber.
